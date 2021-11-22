@@ -1,0 +1,19 @@
+server:
+  port: 8763
+spring:
+  application:
+    name: MGateway
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://172.17.0.2:8761/eureka
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 80000000
+        readTimeout: 80000000
